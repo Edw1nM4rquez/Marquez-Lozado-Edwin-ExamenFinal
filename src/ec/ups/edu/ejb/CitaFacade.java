@@ -1,10 +1,12 @@
 package ec.ups.edu.ejb;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import ec.ups.edu.entidad.Cita;
 
+@Stateless
 public class CitaFacade extends AbstractFacade<Cita> {
 
 	public CitaFacade() {

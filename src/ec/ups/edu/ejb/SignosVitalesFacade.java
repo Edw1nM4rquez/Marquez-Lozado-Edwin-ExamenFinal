@@ -1,11 +1,13 @@
 package ec.ups.edu.ejb;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import ec.ups.edu.entidad.Paciente;
 import ec.ups.edu.entidad.SignosVitales;
 
+@Stateless
 public class SignosVitalesFacade extends AbstractFacade<SignosVitales> {
 
 	public SignosVitalesFacade() {

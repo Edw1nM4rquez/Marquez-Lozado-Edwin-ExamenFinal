@@ -42,7 +42,7 @@ public class Cita implements Serializable {
 		this.numeroCita = numeroCita;
 		this.fecha = fecha;
 		this.hora = hora;
-		this.paciente = paciente;
+	this.paciente = paciente;
 	}
 
 

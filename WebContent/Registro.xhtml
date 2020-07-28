@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Hola mundo</title>
+</h:head>
+<h:body>
+	
+	<h1>Registrar</h1>
+	Bienbenido al sistema
+	<br></br>
+	
+	<h:form>
+	
+		<h:outputLabel value="Pais: " for="pais"/>	
+		<h:inputText id="pais" value="#{ubicacionBean.pais} " ></h:inputText>
+		<br/>
+		
+		<h:outputLabel value="Provincia: " for="provincia"/>	
+		<h:inputText id="provincia" value="#{ubicacionBean.provincia} "   ></h:inputText>
+		<br/>
+		
+		<h:outputLabel value="Ciudad: " for="ciudad"/>	
+		<h:inputText id="ciudad" value="#{ubicacionBean.ciudad} "  ></h:inputText>
+		<br/>
+		
+		<h:outputLabel value="Calle principal: " for="calleP"/>	
+		<h:inputText id="calleP" value="#{ubicacionBean.callePrincipal} "  ></h:inputText>
+		<br/>
+		
+		<h:outputLabel value="Numero: " for="ubicacion"/>	
+		<h:inputText id="ubicacion" value="#{ubicacionBean.numero } "  ></h:inputText>
+		<br/>
+		<br/>
+		
+		<h:commandButton value="Enviar" type="submit" action="#{ubicacionBean.crear()}"></h:commandButton>	
+		<br/>
+	</h:form> 
+	
+</h:body>
+</html>

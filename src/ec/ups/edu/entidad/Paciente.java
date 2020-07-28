@@ -23,6 +23,7 @@ public class Paciente implements Serializable {
 	private String apellido;
 	private String fechaNacimiento;
 	private String direccion ;
+	private String correoElectronico;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy ="paciente")
 	private List<SignosVitales> signosV;
@@ -30,12 +31,12 @@ public class Paciente implements Serializable {
 	
 	
 	public Paciente() {
-
+		super();
 	}
 
  //Ingresar pacinetes con sintomas 
 
-	public Paciente(String cedula, String nombre, String apellido, String fechaNacimiento, String direccion,
+	public Paciente(String cedula, String nombre, String apellido, String fechaNacimiento, String direccion,String correoElec,
 			List<SignosVitales> signosV) {
 		super();
 		this.cedula = cedula;
@@ -43,17 +44,19 @@ public class Paciente implements Serializable {
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
 		this.direccion = direccion;
-		this.signosV = signosV;
+		//this.signosV = signosV;
+		this.correoElectronico= correoElec;
 	}
 
 	//Para registrar pacientes 
-	public Paciente(String cedula, String nombre, String apellido, String fechaNacimiento, String direccion) {
+	public Paciente(String cedula, String nombre, String apellido, String fechaNacimiento, String direccion,String correoElec) {
 		super();
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
 		this.direccion = direccion;
+		this.correoElectronico= correoElec;
 	}
 
 
@@ -62,6 +65,14 @@ public class Paciente implements Serializable {
 	}
 
 
+
+	public String getCorreoElectronico() {
+		return correoElectronico;
+	}
+
+	public void setCorreoElectronico(String correoElectronico) {
+		this.correoElectronico = correoElectronico;
+	}
 
 	public void setCedula(String cedula) {
 		this.cedula = cedula;
@@ -117,7 +128,7 @@ public class Paciente implements Serializable {
 
 
 
-	public List<SignosVitales> getSignosV() {
+public List<SignosVitales> getSignosV() {
 		return signosV;
 	}
 
